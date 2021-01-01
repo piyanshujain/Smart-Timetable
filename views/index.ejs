@@ -1,28 +1,394 @@
-<%- include ("./partials/header") %>
-<div class="ui main text container">
-   	<div class="ui huge header">Anons</div>
-    <div class="ui top attached segment">
-<div class="ui divided items">
-	<% anons.forEach(function(anon){ %>
-	 <div class="item">
-	    <div class="content">
-	      <a class="header"><%= anon.title %></a>
-	      <div class="meta">
-	        <span class="cinema"><%= anon.created.toDateString() %></span>
-	      </div>
-	      <div class="description">
-	        <p><%= anon.body.substring(0,100); %></p>
-	      </div>
-	      <div class="extra">
-	        <a href="/anons/<%=anon._id %>" class="ui floated basic violet button">
-	          Read More
-	          <i class="right chevron icon"></i>
-	        </a>
-	      </div>
-	    </div>
-	  </div>
-	<% }); %>
-</div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="indexmaster.css">
+</head>
+<body>
+
+<div class="periodic">
+
+<h1><center>Smart TimeTable</center></h1>
+  <br>
+  <br>
+  
+  <div class="periodic-row">
+    <div class="box"></div>
+    <div class="box">
+      <div class="next">
+        <div class="day">08:00-08:55</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="next">
+        <div class="day">09:00-09:55</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="next">
+        <div class="day">10:00-10:55</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="next">
+        <div class="day">11:00-11:55</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="next">
+        <div class="day">12:00-12:55</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="next">
+        <div class="day">14:00-14:55</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="next">
+        <div class="day">15:00-15:55</div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="next">
+        <div class="day">16:00-16:55</div>
+      </div>
+    </div>
+  </div> 
+
+<%  %>
+<% for(let day of week){  %>
+  <div class="periodic-row">
+    <div class="cell">
+      <div class="below">
+         <div class="day"><%= day %></div>
+      </div>
+    </div>
+    <%  for(var i=0;i<=7;i++){   %>
+      <div class="cell">
+        <div class="element">
+          <div class="symbol">EE210</div>
+          <div class="at_details">Digital Circuits</div>
+        </div>
+        </div>
+     
+        <%  }  %>
   </div>
-<%- include ("./partials/footer") %>
+  <%  }  %>
+    <!--
+          <div class="cell">
+      <div class="element">
+        <div class="symbol">EE210</div>
+        <div class="at_details">Digital Circuits</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">21</div>
+        <div class="symbol">Sc</div>
+        <div class="at_details">scandium<br />44.956</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">22</div>
+        <div class="symbol">Ti</div>
+        <div class="at_details">titanium<br />47.867</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">23</div>
+        <div class="symbol">V</div>
+        <div class="at_details">vanadium<br />50.942</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">24</div>
+        <div class="symbol">Cr</div>
+        <div class="at_details">chromium<br />51.996</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+  
+  
+  <div class="periodic-row">
+    <div class="cell">
+      <div class="below">
+        <div class="day">Tuesday</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">38</div>
+        <div class="symbol">Sr</div>
+        <div class="at_details">sdivontium<br />87.62</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">39</div>
+        <div class="symbol">Y</div>
+        <div class="at_details">ytdivium<br />88.906</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">40</div>
+        <div class="symbol">Zr</div>
+        <div class="at_details">zirconium<br />91.224</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">41</div>
+        <div class="symbol">Nb</div>
+        <div class="at_details">niobium<br />92.906</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">42</div>
+        <div class="symbol">Mo</div>
+        <div class="at_details">molybdenum<br />95.96</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="periodic-row">
+    <div class="cell">
+      <div class="below">
+        <div class="day">Wednesday</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">56</div>
+        <div class="symbol">Ba</div>
+        <div class="at_details">barium<br />137.33</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">72</div>
+        <div class="symbol">Hf</div>
+        <div class="at_details">hafnium<br />178.49</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">73</div>
+        <div class="symbol">Ta</div>
+        <div class="at_details">tantalum<br />180.95</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">74</div>
+        <div class="symbol">W</div>
+        <div class="at_details">tungsten<br />183.84</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">75</div>
+        <div class="symbol">Re</div>
+        <div class="at_details">rhenium<br />186.21</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="periodic-row">
+    <div class="cell">
+      <div class="below">
+        <div class="day">Thursday</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">56</div>
+        <div class="symbol">Ba</div>
+        <div class="at_details">barium<br />137.33</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">72</div>
+        <div class="symbol">Hf</div>
+        <div class="at_details">hafnium<br />178.49</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">73</div>
+        <div class="symbol">Ta</div>
+        <div class="at_details">tantalum<br />180.95</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">74</div>
+        <div class="symbol">W</div>
+        <div class="at_details">tungsten<br />183.84</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">75</div>
+        <div class="symbol">Re</div>
+        <div class="at_details">rhenium<br />186.21</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="periodic-row">
+    <div class="cell">
+      <div class="below">
+        <div class="day">Friday</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">20</div>
+        <div class="symbol">Ca</div>
+        <div class="at_details">calcium<br />40.078</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">56</div>
+        <div class="symbol">Ba</div>
+        <div class="at_details">barium<br />137.33</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">72</div>
+        <div class="symbol">Hf</div>
+        <div class="at_details">hafnium<br />178.49</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">73</div>
+        <div class="symbol">Ta</div>
+        <div class="at_details">tantalum<br />180.95</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">74</div>
+        <div class="symbol">W</div>
+        <div class="at_details">tungsten<br />183.84</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="element">
+        <div class="at_num">75</div>
+        <div class="symbol">Re</div>
+        <div class="at_details">rhenium<br />186.21</div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+</body>
+</html>
+
