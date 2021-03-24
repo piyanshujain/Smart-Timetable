@@ -1,0 +1,67 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
+</head>
+<body>
+  <div class="ui main text container">
+    <br>
+     	<div class="ui huge header">Fill in your details - <%= urmail %></div>
+          <div class="ui top attached segment">
+  	        <div class="item">
+              <form class="ui form" action="/register" method="POST">
+                <div class="two fields">
+                  <div class="field">
+                    <input name="name" placeholder="Full Name" required>
+                  </div>
+                  <div class="field">
+                    <input type="number" name="roll number" placeholder="Roll Number" required>
+                  </div>
+                </div>
+
+                <form action="" required>
+                  <label for="branch">Branch:</label>
+                  <select name="branch_name" id="branch_id">
+                    <option value="ECE">ECE</option>
+                    <option value="CSE">EEE</option>
+                    <option value="MNC">MNC</option>
+                    <option value="CSE">CSE</option>
+                  </select>
+                </form>
+
+                <form action="" required>
+                  <label for="sem_num">Semester Number:</label>
+                  <select name="sem_name" id="sem_id">
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                  </select>
+                </form>
+
+                <%- include('partials/multi') %> 
+
+                <form action="" required>
+                  <p>Do you want admin rights?</p>
+                  <input type="radio" id="y" name="admin" value="true">
+                  <label for="y">YES</label><br>
+                  <input type="radio" id="n" name="admin" value="false">
+                  <label for="n">NO</label><br>
+                </form>
+
+                  <button> <a href="/smart">Register</a></button>
+              </form>
+            </div>
+          </div>
+              <div class="ui top attached segment">
+  	            <div class="item">
+                  <div class="ui huge header">Already Registered?</div>
+                  <div class="content">
+                      <div class="meta">
+                          <span>
+                            <a href="/smart">Click here!!</a>
+                          </span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+  </div>
+</body>

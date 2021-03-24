@@ -5,12 +5,23 @@
 </head>
 <body>
 
+<div class="nav"> 
+  <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+</div>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
 <div class="periodic">
 
 <h1><center>Smart TimeTable</center></h1>
   <br>
   <br>
-  
   <div class="periodic-row">
     <div class="box"></div>
     <div class="box">
@@ -389,6 +400,18 @@
   </div>
 </div>
 -->
+
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("periodic").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("periodic").style.marginLeft= "0";
+  }
+  </script>
+  
 </body>
 </html>
-

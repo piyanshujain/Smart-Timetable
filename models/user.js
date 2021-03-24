@@ -15,7 +15,6 @@ var UserSchema = new mongoose.Schema({
             ref: "Course"
          }
     ]
-
 });
 
 UserSchema.plugin(passportLocalMongoose);

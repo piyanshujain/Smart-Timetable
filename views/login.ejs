@@ -6,7 +6,7 @@
      	    <div class="ui huge header">LogIn</div>
           <div class="ui top attached segment">
   	        <div class="item">
-              <form class="ui form" action="/login" method="POST">
+              <!-- <form class="ui form" action="/login" method="POST">
                 <div class="two fields">
                   <div class="field">
                   <input type="text" name="username" placeholder="username" autocomplete="off" required>
@@ -14,13 +14,13 @@
                 <div class="field">
                   <input type="password" name="password" placeholder="password">
                   </div>
-                </div>
-                  <button>Login</button>
-              </form>
+                </div> -->
+                  <a href= "<%= auth%>"><button>Login</button></a>
+              <!-- </form> -->
                 <div class="content">
   	                <div class="meta">
       	                <span>
-<a href="/register">Click here to SignUp</a>
+                            <a href="/register">Click here to SignUp</a>
                         </span>
   	                </div>
               	     <div class="description">
@@ -28,4 +28,6 @@
               </div>
           </div>
       </div>
+
+
 </body>

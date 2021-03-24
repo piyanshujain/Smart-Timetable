@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="multi.css">
+<div id="list1" class="dropdown-check-list" tabindex="100">
+  <span class="anchor">Select your courses</span>
+  <ul id="items" class="items">
+      <li><input type="checkbox" /> EE250 </li>
+      <li><input type="checkbox" /> EE252</li>
+      <li><input type="checkbox" /> EE206 </li>
+      <li><input type="checkbox" /> EE207 </li>
+      <li><input type="checkbox" /> EE211 </li>
+      <li><input type="checkbox" /> EE230 </li>
+      <li><input type="checkbox" /> EE253</li>
+  </ul>
+</div>
+<br>
+<br>
+
+<script type="text/javascript">
+  var checkList = document.getElementById('list1');
+var items = document.getElementById('items');
+      checkList.getElementsByClassName('anchor')[0].onclick = function (evt) {
+          if (items.classList.contains('visible')){
+              items.classList.remove('visible');
+              items.style.display = "none";
+          }
+          
+          else{
+              items.classList.add('visible');
+              items.style.display = "block";
+          }
+          
+          
+      }
+
+      items.onblur = function(evt) {
+          items.classList.remove('visible');
+      }
+</script>
